@@ -1,0 +1,330 @@
+   <section className="dark:bg-gray-900">
+      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        {/* Other JSX for the heading */}
+        {/* ... */}
+
+        <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+          {pricingData.map((pricingOption, index) => (
+            <div
+              key={index}
+              className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800"
+            >
+              {/* Pricing details JSX */}
+              <h3 className="mb-4 text-2xl font-semibold">{pricingOption.type}</h3>
+              <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                {pricingOption.description}
+              </p>
+              <div className="flex justify-center items-baseline my-8">
+                <span className="mr-2 text-5xl font-extrabold">{pricingOption.price}</span>
+                <span className="text-gray-500 dark:text-gray-400">{pricingOption.duration}</span>
+              </div>
+              <ul role="list" className="mb-8 space-y-4 text-left">
+                {pricingOption.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center space-x-3">
+                    {/* Checkmark SVG */}
+                    <svg
+                      className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      {/* Checkmark path */}
+                    </svg>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              {/* Button JSX */}
+              <a
+                href="#"
+                className="bg-primary hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-black dark:focus:ring-primary-900"
+              >
+                Get started
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+      <div className="flex flex-col items-center justify-center space-x-2 hover:cursor-pointer">
+        <button
+          className="text-primary hover:underline focus:outline-none"
+          onClick={toggleDetails}
+        >
+          {showDetails ? 'Hide' : 'Show'} Detailed Plan Comparison & Calculator
+        </button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </div>
+
+
+      {
+        showDetails && <div className="flex flex-col items-center justify-center space-x-2 hover:cursor-pointer">
+          Detailed Comparison Table and Pricing Calculator...
+          <br />
+          <PricingCalculator />
+        </div>
+      }
+
+    </section >
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// // "use client";
+// // import Link from 'next/link'
+// // import React, { useState } from 'react'
+// // import PricingCalculator from './pricing-calculator'
+// // import DarkModeSwitcher from '../../components/Header/DarkModeSwitcher';
+
+// // const pricingData = [
+// //   {
+// //     type: 'Starter',
+// //     description: 'Best option for personal use & for your next project.',
+// //     price: '$29',
+// //     duration: '/month',
+// //     features: [
+// //       'Individual configuration',
+// //       'No setup or hidden fees',
+// //       'Team size: 1 developer',
+// //       'Premium support: 6 months',
+// //       'Free updates: 6 months',
+// //     ],
+// //   },
+// //   {
+// //     type: 'Company',
+// //     description: 'Relevant for multiple users, extended & premium support.',
+// //     price: '$99',
+// //     duration: '/month',
+// //     features: [
+// //       'Individual configuration',
+// //       'No setup or hidden fees',
+// //       'Team size: 10 developers',
+// //       'Premium support: 24 months',
+// //       'Free updates: 24 months',
+// //     ],
+// //   },
+// //   {
+// //     type: 'Enterprise',
+// //     description: 'Best for large-scale uses and extended redistribution rights.',
+// //     price: '$499',
+// //     duration: '/month',
+// //     features: [
+// //       'Individual configuration',
+// //       'No setup or hidden fees',
+// //       'Team size: 100+ developers',
+// //       'Premium support: 36 months',
+// //       'Free updates: 36 months',
+// //     ],
+// //   },
+// // ];
+
+// const pricingData = [
+//   {
+//     plan: "Starter",
+//     price: 29,
+//     features: [
+//       "Unlimited placeholder texts",
+//       "Consectetur adipiscing elit",
+//       "Excepteur sint occaecat cupidatat",
+//       "Officia deserunt mollit anim",
+//     ],
+//   },
+//   {
+//     plan: "Business",
+//     price: 49,
+//     features: [
+//       "Unlimited placeholder texts",
+//       "Consectetur adipiscing elit",
+//       "Excepteur sint occaecat cupidatat",
+//       "Officia deserunt mollit anim",
+//       "Predefined chunks as necessary",
+//     ],
+//     popular: true, // Add a property to mark it as popular
+//   },
+// ];
+
+
+// function Pricing() {
+//   const [showDetails, setShowDetails] = useState(false);
+
+//   const toggleDetails = () => {
+//     setShowDetails(prevShowDetails => !prevShowDetails);
+//   };
+
+
+//   return (
+//     <section>
+// <div className="max-w-sm mx-auto lg:max-w-3xl space-y-3 mb-12 lg:mb-16">
+//   <DarkModeSwitcher />
+//   <div className="text-center text-sm text-slate-700 font-medium bg-primary">10K contacts/month</div>
+//     <div className="relative flex items-center ">
+//         <input className="
+//             relative appearance-none cursor-pointer w-full bg-transparent focus:outline-none
+//             [&::-webkit-slider-thumb]:appearance-none
+//             [&::-webkit-slider-thumb]:h-5
+//             [&::-webkit-slider-thumb]:w-5
+//             [&::-webkit-slider-thumb]:rounded-full
+//             [&::-webkit-slider-thumb]:bg-white
+//             [&::-webkit-slider-thumb]:shadow
+//             [&::-webkit-slider-thumb]:focus-visible:ring
+//             [&::-webkit-slider-thumb]:focus-visible:ring-indigo-300
+//             [&::-moz-range-thumb]:h-5
+//             [&::-moz-range-thumb]:w-5                            
+//             [&::-moz-range-thumb]:rounded-full
+//             [&::-moz-range-thumb]:bg-white
+//             [&::-moz-range-thumb]:border-none
+//             [&::-moz-range-thumb]:shadow
+//             [&::-moz-range-thumb]:focus-visible:ring
+//             [&::-moz-range-thumb]:focus-visible:ring-indigo-300                            
+//         " type="range" min="0" max="4" aria-valuetext="10K contacts/month" aria-label="Pricing Slider" />
+//     </div>
+//     <div className="max-w-sm mx-auto lg:max-w-3xl space-y-3 mb-12 lg:mb-16">
+//     <div className="text-center text-sm text-slate-700 font-medium">10K contacts/month</div>
+//     <div className="relative flex items-center">
+//         <div className="
+//             absolute left-2.5 right-2.5 h-1.5 bg-slate-200 rounded-full overflow-hidden
+//         " aria-hidden="true"></div>            
+//         <input className="
+//             relative appearance-none cursor-pointer w-full bg-transparent focus:outline-none
+//             [&::-webkit-slider-thumb]:appearance-none
+//             [&::-webkit-slider-thumb]:h-5
+//             [&::-webkit-slider-thumb]:w-5
+//             [&::-webkit-slider-thumb]:rounded-full
+//             [&::-webkit-slider-thumb]:bg-white
+//             [&::-webkit-slider-thumb]:shadow
+//             [&::-webkit-slider-thumb]:focus-visible:ring
+//             [&::-webkit-slider-thumb]:focus-visible:ring-indigo-300
+//             [&::-moz-range-thumb]:h-5
+//             [&::-moz-range-thumb]:w-5                            
+//             [&::-moz-range-thumb]:rounded-full
+//             [&::-moz-range-thumb]:bg-white
+//             [&::-moz-range-thumb]:border-none
+//             [&::-moz-range-thumb]:shadow
+//             [&::-moz-range-thumb]:focus-visible:ring
+//             [&::-moz-range-thumb]:focus-visible:ring-indigo-300                            
+//         " type="range" min="0" max="4" aria-valuetext="10K contacts/month" aria-label="Pricing Slider" />
+//     </div>
+// </div>
+// </div>
+
+//       <div className="max-w-sm mx-auto grid gap-6 lg:grid-cols-2 items-start lg:max-w-[728px]">
+
+//         {/* <!-- Pricing tab 1 --> */}
+//         <div className="h-full">
+//           <div className="relative flex flex-col h-full p-6 pb-10">
+//             <div className="h-8" aria-hidden="true"></div>
+//             <div className="mb-5">
+//               <div className="text-slate-900 font-semibold mb-1">Starter</div>
+//               <div className="inline-flex items-baseline mb-2">
+//                 <span className="text-slate-900 font-bold text-3xl">$</span>
+//                 <span className="text-slate-900 font-bold text-4xl">29</span>
+//                 <span className="text-slate-500 font-medium">/mo</span>
+//               </div>
+//               <div className="text-sm text-slate-500 mb-5">There are many variations available, but the majority have suffered.</div>
+//               <a className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150" href="#0">
+//                 Purchase Plan
+//               </a>
+//             </div>
+//             <div className="text-slate-900 text-sm font-medium mb-4">Includes:</div>
+//             <ul className="text-slate-600 text-sm space-y-3 grow">
+//               <li className="flex items-center">
+//                 <svg className="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+//                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+//                 </svg>
+//                 <span>Unlimited placeholder texts</span>
+//               </li>
+//               <li className="flex items-center">
+//                 <svg className="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+//                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+//                 </svg>
+//                 <span>Consectetur adipiscing elit</span>
+//               </li>
+//               <li className="flex items-center">
+//                 <svg className="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+//                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+//                 </svg>
+//                 <span>Excepteur sint occaecat cupidatat</span>
+//               </li>
+//               <li className="flex items-center">
+//                 <svg className="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+//                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+//                 </svg>
+//                 <span>Officia deserunt mollit anim</span>
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+
+//         {/* <!-- Pricing tab 2 --> */}
+//         <div className="h-full">
+//           <div className="relative flex flex-col h-full p-6 pb-10 rounded-2xl bg-slate-900 border border-slate-900 shadow shadow-slate-950/5">
+//             <div className="absolute top-0 right-0 mr-6 -mt-4">
+//               <div className="inline-flex items-center text-xs font-semibold py-1.5 px-3 bg-emerald-500 text-white rounded-full shadow-sm shadow-slate-950/5">Most Popular</div>
+//             </div>
+//             <div className="h-8" aria-hidden="true">
+//               <svg className="drop-shadow-[0_0_8px_rgba(224,154,19,0.7)]" xmlns="http://www.w3.org/2000/svg" width="24" height="26">
+//                 <defs>
+//                   <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+//                     <stop offset="0%" stop-color="#FBBF24" />
+//                     <stop offset="100%" stop-color="#F59E0B" />
+//                   </linearGradient>
+//                 </defs>
+//                 <path fill="url(#a)" fill-rule="evenodd" d="M15 0 0 16h11L9 26l15-16H13z" />
+//               </svg>
+//             </div>
+//             <div className="mb-5">
+//               <div className="text-slate-200 font-semibold mb-1">Business</div>
+//               <div className="inline-flex items-baseline mb-2">
+//                 <span className="text-slate-200 font-bold text-3xl">$</span>
+//                 <span className="text-slate-200 font-bold text-4xl">49</span>
+//                 <span className="text-slate-500 font-medium">/mo</span>
+//               </div>
+//               <div className="text-sm text-slate-500 mb-5">There are many variations available, but the majority have suffered.</div>
+//               <a className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-600 transition-colors duration-150" href="#0">
+//                 Purchase Plan
+//               </a>
+//             </div>
+//             <div className="text-slate-200 text-sm font-medium mb-4">Everything in Starter, plus:</div>
+//             <ul className="text-slate-400 text-sm space-y-3 grow">
+//               <li className="flex items-center">
+//                 <svg className="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+//                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+//                 </svg>
+//                 <span>Unlimited placeholder texts</span>
+//               </li>
+//               <li className="flex items-center">
+//                 <svg className="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+//                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+//                 </svg>
+//                 <span>Consectetur adipiscing elit</span>
+//               </li>
+//               <li className="flex items-center">
+//                 <svg className="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+//                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+//                 </svg>
+//                 <span>Excepteur sint occaecat cupidatat</span>
+//               </li>
+//               <li className="flex items-center">
+//                 <svg className="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+//                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+//                 </svg>
+//                 <span>Officia deserunt mollit anim</span>
+//               </li>
+//               <li className="flex items-center">
+//                 <svg className="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+//                   <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+//                 </svg>
+//                 <span>Predefined chunks as necessary</span>
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+
+//       </div>
+//     </section>
+//   )
+// }
+
+// export default Pricing

@@ -1,0 +1,23 @@
+File Conventions
+Next.js provides a set of special files to create UI with specific behavior in nested routes:
+
+layout	Shared UI for a segment and its children
+page	Unique UI of a route and make routes publicly accessible
+loading	Loading UI for a segment and its children
+not-found	Not found UI for a segment and its children
+error	Error UI for a segment and its children
+global-error	Global Error UI
+route	Server-side API endpoint
+template	Specialized re-rendered Layout UI
+default	Fallback UI for Parallel Routes
+Good to know: .js, .jsx, or .tsx file extensions can be used for special files.
+
+Component Hierarchy
+The React components defined in special files of a route segment are rendered in a specific hierarchy:
+
+layout.js
+template.js
+error.js (React error boundary)
+loading.js (React suspense boundary)
+not-found.js (React error boundary)
+page.js or nested layout.js
