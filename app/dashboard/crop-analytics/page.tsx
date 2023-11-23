@@ -19,7 +19,6 @@ const CropAnalytics = () => {
                 <div className="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2">
                     Filter button
                     {/* <FilterButton /> */}
-  // Datepicker built with flatpickr
                     {/* <Datepicker /> */}
                     <button className="btn bg-indigo-500 hover:bg-indigo-600 text-white">
                         <svg className="w-4 h-4 fill-current opacity-50 shrink-0" viewBox="0 0 16 16">

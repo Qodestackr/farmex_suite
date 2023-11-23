@@ -8,7 +8,7 @@ const FarmGuardPage = () => {
                 <br />
                 Our Engineers are at work!
             </div>
-            <h1 className="text-4xl font-bold mb-4">FarmGuard - Your Farm's Protector</h1>
+            <h1 className="text-4xl font-bold mb-4">FarmGuard - Your Farm&apos;s Protector</h1>
             <p className="text-lg mb-8">
                 Our unique monitoring system, FarmGuard, provides real-time feedback and acts as the brain of your farm,
                 shielding it from adverse conditions.
@@ -22,7 +22,7 @@ const FarmGuardPage = () => {
             </p>
             <h2 className="text-2xl font-bold mb-4">Easy to Use and Convenient</h2>
             <p className="text-lg mb-8">
-                FarmGuard™ is designed for simplicity. Speak to our consultants, order your FarmGuard™, and we'll handle the rest.
+                FarmGuard™ is designed for simplicity. Speak to our consultants, order your FarmGuard™, and we&apos;ll handle the rest.
                 We deliver, install, and set up your cloud access, allowing you to manage your farm from our app, web portal,
                 or even through a USSD platform.
             </p>

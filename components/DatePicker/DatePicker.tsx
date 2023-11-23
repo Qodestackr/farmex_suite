@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-// import Flatpickr from 'react-flatpickr';
+import Flatpickr from 'react-flatpickr';
 import dynamic from 'next/dynamic';
 
 // const Flatpickr = dynamic(() => import("react-flatpickr"), { ssr: false });

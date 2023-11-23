@@ -66,27 +66,30 @@ export const metadata: Metadata & Record<string, any> /**to include an image */ 
 export default function Home() {
   return (
     <>
-    <LandingHeroSection />
+      <LandingHeroSection />
       {/* <ModalVideo thumb={"/"} thumbWidth={7} thumbHeight={10} thumbAlt={"Modal Video"} video={""} videoWidth={30} videoHeight={40} /> */}
-    
-    <FeatureList />
-    {/* Industry Stats */}
-    <IndustryStats />
 
-    {/* <CookiesBanner /> */}
-    <CardDataStats title={"Title"} total={"199"} rate={"6"} children={undefined} />
-    <PartnershipLogos />
+      <FeatureList />
+      {/* Industry Stats */}
+      <IndustryStats />
 
-    <SubscribeNewsletter />
-    
+      {/* <CookiesBanner /> */}
+      <CardDataStats title={"Title"} total={"199"} rate={"6"} children={<p>Hello Card Status</p>}>
+        {/* Content for CardDataStats goes here */}
+      </CardDataStats>
 
-    {/* Components */}
-    <DefaultTable />
-    
-    <Th />
-    <WriteAComment />
+      <PartnershipLogos />
 
-    
+      <SubscribeNewsletter />
+
+
+      {/* Components */}
+      <DefaultTable />
+
+      <Th />
+      <WriteAComment />
+
+
     </>
   );
 }
