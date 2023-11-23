@@ -74,9 +74,8 @@ export default function Home() {
       <IndustryStats />
 
       {/* <CookiesBanner /> */}
-      <CardDataStats title={"Title"} total={"199"} rate={"6"} children={<p>Hello Card Status</p>}>
-        {/* Content for CardDataStats goes here */}
-      </CardDataStats>
+      {/* <CardDataStats title={"Title"} total={"199"} rate={"6"} children={<p>Hello Card Status</p>}>
+      </CardDataStats> */}
 
       <PartnershipLogos />
 

@@ -32,7 +32,7 @@ const ResetPassword: React.FC = () => {
               </Link>
 
               <p className="2xl:px-20">
-                We will <span className="text-green-400">Email</span>  you instructions to reset your password. If you can't access your email, you can try account recovery.
+                We will <span className="text-green-400">Email</span>  you instructions to reset your password. If you cant access your email, you can try account recovery.
                 Or Change messaging to other channels like SMS from settings.
               </p>
 
