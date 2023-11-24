@@ -1,56 +1,77 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import { Metadata } from "next";
-import Breadcrumb from "../../../components/Breadcrumbs/Breadcrumb";
+import { Metadata } from 'next';
+import Breadcrumb from '../../../components/Breadcrumbs/Breadcrumb';
 
-export const metadata: Metadata & Record<string, any> /**to include an image */ = {
-  title: "Farmex Cloud | Farming Software and Tools",
-  description: "Synnefa offers smart and comprehensive farming tools for the modern farmer. Explore our marketplace and discover top-quality farming software and products.",
-  keywords: ["farming software", "agricultural tools", "modern farming", "farm management", "agtech marketplace"],
-  image: "/path/to/your/image.jpg",
-  url: "https://www.yourfarmexcloudwebsite.com",
-  author: "FarmexCloud Team",
-  twitterUsername: "@FarmexCloud",
-  facebookAppID: "1234567890",
-  type: "website",
-  locale: "en_US",
-  siteName: "Farmex Cloud",
+export const metadata: Metadata &
+  Record<string, any> /**to include an image */ = {
+  title: 'Farmex Cloud | Farming Software and Tools',
+  description:
+    'Synnefa offers smart and comprehensive farming tools for the modern farmer. Explore our marketplace and discover top-quality farming software and products.',
+  keywords: [
+    'farming software',
+    'agricultural tools',
+    'modern farming',
+    'farm management',
+    'agtech marketplace'
+  ],
+  image: '/path/to/your/image.jpg',
+  url: 'https://www.yourfarmexcloudwebsite.com',
+  author: 'FarmexCloud Team',
+  twitterUsername: '@FarmexCloud',
+  facebookAppID: '1234567890',
+  type: 'website',
+  locale: 'en_US',
+  siteName: 'Farmex Cloud',
   farmexGIS: {
-    description: "Empowering Agriculture Through Geospatial Intelligence",
+    description: 'Empowering Agriculture Through Geospatial Intelligence',
     highlights: [
-      "Advanced GIS solutions tailored for the agriculture industry",
-      "Spatial analysis for optimized crop planning and yield forecasting",
-      "Precision agriculture techniques for resource-efficient farming",
-      "Integration of satellite imagery and IoT data for real-time insights",
-      "Custom mapping and visualization tools for farm management",
+      'Advanced GIS solutions tailored for the agriculture industry',
+      'Spatial analysis for optimized crop planning and yield forecasting',
+      'Precision agriculture techniques for resource-efficient farming',
+      'Integration of satellite imagery and IoT data for real-time insights',
+      'Custom mapping and visualization tools for farm management'
     ],
-    expertise: ["GIS development", "Geospatial analysis", "Precision agriculture", "Remote sensing"],
+    expertise: [
+      'GIS development',
+      'Geospatial analysis',
+      'Precision agriculture',
+      'Remote sensing'
+    ],
     caseStudies: [
       {
-        title: "Optimizing Crop Rotation",
-        description: "Implemented GIS-based crop rotation strategies resulting in increased soil fertility and crop yield.",
+        title: 'Optimizing Crop Rotation',
+        description:
+          'Implemented GIS-based crop rotation strategies resulting in increased soil fertility and crop yield.'
       },
       {
-        title: "IoT Integration for Precision Farming",
-        description: "Utilized GIS and IoT technologies to enable precision agriculture, optimizing resource usage.",
-      },
+        title: 'IoT Integration for Precision Farming',
+        description:
+          'Utilized GIS and IoT technologies to enable precision agriculture, optimizing resource usage.'
+      }
     ],
     contact: {
-      email: "gis@farmexcloud.com",
-      phone: "+1234567890",
-      website: "https://www.farmexcloud.com/gis",
-    },
+      email: 'gis@farmexcloud.com',
+      phone: '+1234567890',
+      website: 'https://www.farmexcloud.com/gis'
+    }
   },
 
   farmexConsultancy: {
-    description: "Farmex Consultancy specializes in Geographic Information Systems (GIS) development for the agriculture sector. We provide cutting-edge solutions to optimize farming processes and enhance agricultural productivity.",
-    services: ["GIS development", "Spatial analysis", "Precision agriculture", "Farm management solutions"],
+    description:
+      'Farmex Consultancy specializes in Geographic Information Systems (GIS) development for the agriculture sector. We provide cutting-edge solutions to optimize farming processes and enhance agricultural productivity.',
+    services: [
+      'GIS development',
+      'Spatial analysis',
+      'Precision agriculture',
+      'Farm management solutions'
+    ],
     contact: {
-      email: "info@farmexconsultancy.com",
-      phone: "+1234567890",
-      website: "https://www.farmexconsultancy.com",
-    },
-  },
+      email: 'info@farmexconsultancy.com',
+      phone: '+1234567890',
+      website: 'https://www.farmexconsultancy.com'
+    }
+  }
 };
 
 const Profile = () => {
@@ -61,7 +82,7 @@ const Profile = () => {
       <div className="overflow-hidden rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
         <div className="relative z-20 h-35 md:h-65">
           <Image
-            src={"/images/cover/cover-01.png"}
+            src={'/images/cover/cover-01.png'}
             alt="profile cover"
             className="h-full w-full rounded-tl-sm rounded-tr-sm object-cover object-center"
             width={970}
@@ -104,7 +125,7 @@ const Profile = () => {
           <div className="relative z-30 mx-auto -mt-22 h-30 w-full max-w-30 rounded-full bg-white/20 p-1 backdrop-blur sm:h-44 sm:max-w-44 sm:p-3">
             <div className="relative drop-shadow-2">
               <Image
-                src={"/images/user/user-06.png"}
+                src={'/images/user/user-06.png'}
                 width={160}
                 height={160}
                 alt="profile"
@@ -145,7 +166,7 @@ const Profile = () => {
           </div>
           <div className="mt-4">
             <h3 className="mb-1.5 text-2xl font-semibold text-black dark:text-white">
-             Wilson Gichuhi
+              Wilson Gichuhi
             </h3>
             <p className="font-medium">Acuva Farming Team</p>
             <div className="mx-auto mt-4.5 mb-5.5 grid max-w-94 grid-cols-3 rounded-md border border-stroke py-2.5 shadow-1 dark:border-strokedark dark:bg-[#37404F]">
@@ -176,10 +197,10 @@ const Profile = () => {
               <p className="mt-4.5">
                 Acuva GIS specializes in cutting edge farming utilities such as:
                 <br />
-                - Renting machinery<br />
+                - Renting machinery
+                <br />
                 - Certified Farm Consultants <br />
-                - Dairy and Horticulture <br />
-                - Vegetable farming
+                - Dairy and Horticulture <br />- Vegetable farming
               </p>
             </div>
 

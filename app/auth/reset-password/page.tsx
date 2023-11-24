@@ -1,8 +1,8 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { Metadata } from "next";
-import Breadcrumb from "../../../components/Breadcrumbs/Breadcrumb";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Metadata } from 'next';
+import Breadcrumb from '../../../components/Breadcrumbs/Breadcrumb';
 
 const ResetPassword: React.FC = () => {
   return (
@@ -16,24 +16,28 @@ const ResetPassword: React.FC = () => {
               <Link className="mb-5.5 inline-block" href="/">
                 <Image
                   className="hidden dark:block"
-                  src={"/images/logo/logo.jpg"}
+                  src={'/images/logo/logo.jpg'}
                   alt="Logo"
                   width={176}
                   height={32}
                 />
                 <Image
                   className="dark:hidden"
-                  src={"/images/logo/logo.jpg"} // Apply Dark Mode Logo
+                  src={'/images/logo/logo.jpg'} // Apply Dark Mode Logo
                   alt="Logo"
                   width={176}
                   height={32}
                 />
-                <h1 className="text-white text-2xl font-bold mb-4">Farmex Cloud</h1>
+                <h1 className="text-white text-2xl font-bold mb-4">
+                  Farmex Cloud
+                </h1>
               </Link>
 
               <p className="2xl:px-20">
-                We will <span className="text-green-400">Email</span>  you instructions to reset your password. If you cant access your email, you can try account recovery.
-                Or Change messaging to other channels like SMS from settings.
+                We will <span className="text-green-400">Email</span> you
+                instructions to reset your password. If you cant access your
+                email, you can try account recovery. Or Change messaging to
+                other channels like SMS from settings.
               </p>
 
               <span className="mt-15 inline-block">
@@ -163,7 +167,9 @@ const ResetPassword: React.FC = () => {
 
           <div className="w-full border-stroke dark:border-strokedark xl:w-1/2 xl:border-l-2">
             <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
-              <span className="mb-1.5 block font-medium">Farmex Cloud Password Reset</span>
+              <span className="mb-1.5 block font-medium">
+                Farmex Cloud Password Reset
+              </span>
               <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
                 Reset Your Password
               </h2>
@@ -211,7 +217,7 @@ const ResetPassword: React.FC = () => {
                 <div className="mt-6 text-center">
                   {/*  */}
                   <p>
-                    Not so Sure?{" "}
+                    Not so Sure?{' '}
                     <Link href="/auth/signin" className="text-primary">
                       Back to Signin
                     </Link>

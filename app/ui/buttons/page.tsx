@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { Metadata } from "next";
-import Breadcrumb from "../../../components/Breadcrumbs/Breadcrumb";
+import Link from 'next/link';
+import { Metadata } from 'next';
+import Breadcrumb from '../../../components/Breadcrumbs/Breadcrumb';
 export const metadata: Metadata = {
-  title: "Buttons Page | Next.js E-commerce Dashboard Template",
-  description: "This is Buttons page for TailAdmin Next.js",
+  title: 'Buttons Page | Next.js E-commerce Dashboard Template',
+  description: 'This is Buttons page for TailAdmin Next.js'
   // other metadata
 };
 

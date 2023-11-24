@@ -1,47 +1,47 @@
-import Image from "next/image";
-import { BRAND } from "../../types/brand";
+import Image from 'next/image';
+import { BRAND } from '../../types/brand';
 
 const brandData: BRAND[] = [
   {
-    logo: "",
-    name: "Farmex  Marketplace",
+    logo: '',
+    name: 'Farmex  Marketplace',
     visitors: 3.5,
-    revenues: "5,768",
+    revenues: '5,768',
     sales: 590,
-    conversion: 4.8,
+    conversion: 4.8
   },
   {
-    logo: "/images/brand/brand-01.svg",
-    name: "Google",
+    logo: '/images/brand/brand-01.svg',
+    name: 'Google',
     visitors: 3.5,
-    revenues: "5,768",
+    revenues: '5,768',
     sales: 590,
-    conversion: 4.8,
+    conversion: 4.8
   },
   {
-    logo: "/images/brand/brand-02.svg",
-    name: "Twitter",
+    logo: '/images/brand/brand-02.svg',
+    name: 'Twitter',
     visitors: 2.2,
-    revenues: "4,635",
+    revenues: '4,635',
     sales: 467,
-    conversion: 4.3,
+    conversion: 4.3
   },
   {
-    logo: "/images/brand/brand-04.svg",
-    name: "Vimeo",
+    logo: '/images/brand/brand-04.svg',
+    name: 'Vimeo',
     visitors: 1.5,
-    revenues: "3,580",
+    revenues: '3,580',
     sales: 389,
-    conversion: 2.5,
+    conversion: 2.5
   },
   {
-    logo: "/images/brand/brand-05.svg",
-    name: "Facebook",
+    logo: '/images/brand/brand-05.svg',
+    name: 'Facebook',
     visitors: 3.5,
-    revenues: "6,768",
+    revenues: '6,768',
     sales: 390,
-    conversion: 4.2,
-  },
+    conversion: 4.2
+  }
 ];
 
 const TableOne = () => {
@@ -84,8 +84,8 @@ const TableOne = () => {
           <div
             className={`grid grid-cols-3 sm:grid-cols-5 ${
               key === brandData.length - 1
-                ? ""
-                : "border-b border-stroke dark:border-strokedark"
+                ? ''
+                : 'border-b border-stroke dark:border-strokedark'
             }`}
             key={key}
           >

@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 // import { VectorMap } from "@react-jvectormap/core";
 // import { usAea } from "@react-jvectormap/unitedstates";
 
@@ -21,11 +21,12 @@ import React from "react";
 
 const MapOne = () => {
   return (
-    <div className={`col-span-12 rounded-sm border border-stroke 
+    <div
+      className={`col-span-12 rounded-sm border border-stroke 
     bg-white py-6 px-7.5 shadow-default dark:border-strokedark dark:bg-boxdark 
-    xl:col-span-7 flex justify-center items-center`}>
+    xl:col-span-7 flex justify-center items-center`}
+    >
       {/* TODO, Remove Flex when adding Features*/}
-
 
       {/**
  *       <h4 className="mb-2 text-xl font-semibold text-black dark:text-white">

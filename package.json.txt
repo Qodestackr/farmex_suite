@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+    "lint": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",

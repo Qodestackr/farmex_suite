@@ -1,11 +1,11 @@
-"use client";
-import { useEffect } from "react";
+'use client';
+import { useEffect } from 'react';
 
 function Search() {
   useEffect(() => {});
 
   const showDropDownMenu_search = (el: any) => {
-    el.target.parentElement.children[1].classList.toggle("hidden");
+    el.target.parentElement.children[1].classList.toggle('hidden');
   };
   const swaptext_search = (el: any) => {
     // const targetText = el.target.innerText;
@@ -15,7 +15,7 @@ function Search() {
   };
 
   const showDropDownMenuOne_search = (el: any) => {
-    el.target.parentElement.children[1].classList.toggle("hidden");
+    el.target.parentElement.children[1].classList.toggle('hidden');
   };
   const swaptextone_search = (el: any) => {
     // const targetText = el.target.innerText;
@@ -27,7 +27,7 @@ function Search() {
   };
 
   const showDropDownMenuTwo_search = (el: any) => {
-    el.target.parentElement.children[1].classList.toggle("hidden");
+    el.target.parentElement.children[1].classList.toggle('hidden');
   };
 
   const swaptexttwo_search = (el: any) => {
@@ -392,7 +392,7 @@ function Search() {
                   </div>
                 </div>
               </div>
-              <div className="lg:flex justify-end mr-1 items-center gap-x-3 mt-12 lg:block md:hidden hidden">
+              <div className="lg:flex justify-end mr-1 items-center gap-x-3 mt-12 md:hidden hidden">
                 <button className="text-sm font-medium leading-none text-center text-indigo-700 px-6 py-4 border rounded-md border-indigo-700  hover:bg-gray-100 transform duration-300 ease-in-out">
                   Cancel
                 </button>

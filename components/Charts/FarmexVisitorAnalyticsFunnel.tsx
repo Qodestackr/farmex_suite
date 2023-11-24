@@ -1,8 +1,10 @@
-"use client";
-import { ApexOptions } from "apexcharts";
-import React, { useState } from "react";
-import dynamic from "next/dynamic";
-const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
+'use client';
+import { ApexOptions } from 'apexcharts';
+import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
+const ReactApexChart = dynamic(() => import('react-apexcharts'), {
+  ssr: false
+});
 
 interface FarmexVisitorAnalyticsFunnelState {
   series: number[];
@@ -10,49 +12,49 @@ interface FarmexVisitorAnalyticsFunnelState {
 
 const options: ApexOptions = {
   chart: {
-    type: "donut",
+    type: 'donut'
   },
-  colors: ["#10B981", "#375E83", "#259AE6", "#FFA70B"],
-  labels: ["Remote", "Hybrid", "Onsite", "Leave"],
+  colors: ['#10B981', '#375E83', '#259AE6', '#FFA70B'],
+  labels: ['Remote', 'Hybrid', 'Onsite', 'Leave'],
   legend: {
     show: true,
-    position: "bottom",
+    position: 'bottom'
   },
 
   plotOptions: {
     pie: {
       donut: {
-        size: "65%",
-        background: "transparent",
-      },
-    },
+        size: '65%',
+        background: 'transparent'
+      }
+    }
   },
   dataLabels: {
-    enabled: false,
+    enabled: false
   },
   responsive: [
     {
       breakpoint: 2600,
       options: {
         chart: {
-          width: 380,
-        },
-      },
+          width: 380
+        }
+      }
     },
     {
       breakpoint: 640,
       options: {
         chart: {
-          width: 200,
-        },
-      },
-    },
-  ], 
+          width: 200
+        }
+      }
+    }
+  ]
 };
 
 const FarmexVisitorAnalyticsFunnel: React.FC = () => {
   const [state, setState] = useState<FarmexVisitorAnalyticsFunnelState>({
-    series: [65, 34, 12, 56],
+    series: [65, 34, 12, 56]
   });
 
   return (
@@ -98,7 +100,10 @@ const FarmexVisitorAnalyticsFunnel: React.FC = () => {
       </div>
 
       <div className="mb-2">
-        <div id="FarmexVisitorAnalyticsFunnel" className="mx-auto flex justify-center">
+        <div
+          id="FarmexVisitorAnalyticsFunnel"
+          className="mx-auto flex justify-center"
+        >
           <ReactApexChart
             options={options}
             series={state.series}

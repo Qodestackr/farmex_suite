@@ -1,13 +1,30 @@
 {
-  "name": "tailadmin-free-nextjs",
+  "name": "farmex_client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "precommit": "npx prettier --write . && lint-staged"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "next lint",
+      "tsc --noEmit"
+    ],
+    "*.{js,jsx,ts,tsx,json,md}": [
+      "npx prettier --write",
+      "git add"
+    ]
+  },  
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@react-jvectormap/core": "^1.0.4",
@@ -30,5 +47,10 @@
     "react-jvectormap": "^0.0.16",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "3.1.0"
   }
 }

@@ -1,8 +1,8 @@
-"use client";
-import { ApexOptions } from "apexcharts";
-import React, { useState } from "react";
-import dynamic from "next/dynamic";
-const ApexCharts = dynamic(() => import("react-apexcharts"), { ssr: false });
+'use client';
+import { ApexOptions } from 'apexcharts';
+import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
+const ApexCharts = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 interface FarmexVisitorAnalyticsChartState {
   series: { data: number[] }[];
@@ -15,96 +15,96 @@ const FarmexVisitorAnalyticsChart: React.FC = () => {
         data: [
           168, 385, 201, 298, 187, 195, 291, 110, 215, 390, 280, 112, 123, 212,
           270, 190, 310, 115, 90, 380, 112, 223, 292, 170, 290, 110, 115, 290,
-          380, 312,
-        ],
-      },
-    ],
+          380, 312
+        ]
+      }
+    ]
   });
 
   // Update the state
   const updateState = () => {
     setState((prevState) => ({
-      ...prevState,
+      ...prevState
       // Update the desired properties
     }));
   };
   updateState;
 
   const options: ApexOptions = {
-    colors: ["#3C50E0"],
+    colors: ['#3C50E0'],
     chart: {
-      fontFamily: "Satoshi, sans-serif",
-      type: "bar",
+      fontFamily: 'Satoshi, sans-serif',
+      type: 'bar',
       height: 350,
       toolbar: {
-        show: false,
-      },
+        show: false
+      }
     },
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: "55%",
+        columnWidth: '55%',
         // endingShape: "rounded",
-        borderRadius: 2,
-      },
+        borderRadius: 2
+      }
     },
     dataLabels: {
-      enabled: false,
+      enabled: false
     },
     stroke: {
       show: true,
       width: 4,
-      colors: ["transparent"],
+      colors: ['transparent']
     },
     xaxis: {
       categories: [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24",
-        "25",
-        "26",
-        "27",
-        "28",
-        "29",
-        "30",
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '10',
+        '11',
+        '12',
+        '13',
+        '14',
+        '15',
+        '16',
+        '17',
+        '18',
+        '19',
+        '20',
+        '21',
+        '22',
+        '23',
+        '24',
+        '25',
+        '26',
+        '27',
+        '28',
+        '29',
+        '30'
       ],
       axisBorder: {
-        show: false,
+        show: false
       },
       axisTicks: {
-        show: false,
-      },
+        show: false
+      }
     },
     legend: {
       show: true,
-      position: "top",
-      horizontalAlign: "left",
-      fontFamily: "inter",
+      position: 'top',
+      horizontalAlign: 'left',
+      fontFamily: 'inter',
 
       markers: {
-        radius: 99,
-      },
+        radius: 99
+      }
     },
     // yaxis: {
     //   title: false,
@@ -112,24 +112,24 @@ const FarmexVisitorAnalyticsChart: React.FC = () => {
     grid: {
       yaxis: {
         lines: {
-          show: false,
-        },
-      },
+          show: false
+        }
+      }
     },
     fill: {
-      opacity: 1,
+      opacity: 1
     },
 
     tooltip: {
       x: {
-        show: false,
-      },
+        show: false
+      }
       // y: {
       //   formatter: function (val) {
       //     return val;
       //   },
       // },
-    },
+    }
   };
 
   return (

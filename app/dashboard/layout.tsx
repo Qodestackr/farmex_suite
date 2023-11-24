@@ -1,15 +1,15 @@
-"use client";
-import "../globals.css";
-import "../data-tables-css.css";
-import "../satoshi.css";
-import { useState, useEffect } from "react";
-import Loader from "../../components/common/Loader";
+'use client';
+import '../globals.css';
+import '../data-tables-css.css';
+import '../satoshi.css';
+import { useState, useEffect } from 'react';
+import Loader from '../../components/common/Loader';
 
-import Sidebar from "../../components/Sidebar";
-import Header from "../../components/Header";
+import Sidebar from '../../components/Sidebar';
+import Header from '../../components/Header';
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {

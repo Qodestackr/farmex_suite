@@ -1,16 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import SidebarLinkGroup from "./SidebarLinkGroup";
-import Image from "next/image";
-import JoyRide from "react-joyride";
-
+import React, { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import SidebarLinkGroup from './SidebarLinkGroup';
+import Image from 'next/image';
+import JoyRide from 'react-joyride';
 
 // import dynamic from "next/dynamic";
 // const JoyRideTour = dynamic(() => import("../Tour/Tour"), {
 //   ssr: false,
 // });
-
 
 import {
   ShoppingBagIcon,
@@ -19,94 +17,124 @@ import {
   WorkflowIcon,
   CRMIcon,
   FarmGuardIcon
-} from "./_icons";
+} from './_icons';
 
 interface SidebarProps {
   sidebarOpen: boolean;
   setSidebarOpen: (arg: boolean) => void;
 }
 
-
-
 const TOUR_STEPS = [
-    // Target Classes...
-    {
-        target: ".dashbboard-sidebar-marketplace",
-        content: "Farmex Marketplace Dashboard. Access everything Store/e-commerce",
-    },
-    {
-        target: ".events-x-calendar",
-        content: "Events and Calendar",
-    },
-    {
-        target: ".crop-x-analytics",
-        content: "Crop Analytics",
-    },
-]
+  // Target Classes...
+  {
+    target: '.dashbboard-sidebar-marketplace',
+    content: 'Farmex Marketplace Dashboard. Access everything Store/e-commerce'
+  },
+  {
+    target: '.events-x-calendar',
+    content: 'Events and Calendar'
+  },
+  {
+    target: '.crop-x-analytics',
+    content: 'Crop Analytics'
+  }
+];
 
 const Tour: React.FC = () => {
-    return (
-        <>
-            <JoyRide
-                steps={TOUR_STEPS}
-                showSkipButton={true}
-                styles={{
-                    tooltipContainer: {
-                        textAlign: "left"
-                    },
-                    buttonNext: {
-                        backgroundColor: "green"
-                    },
-                    buttonBack: {
-                        marginRight: 10
-                    }
-                }}
+  return (
+    <>
+      <JoyRide
+        steps={TOUR_STEPS}
+        showSkipButton={true}
+        styles={{
+          tooltipContainer: {
+            textAlign: 'left'
+          },
+          buttonNext: {
+            backgroundColor: 'green'
+          },
+          buttonBack: {
+            marginRight: 10
+          }
+        }}
+        continuous={true}
+        debug={true}
+        disableCloseOnEsc={true}
+        disableOverlay={true}
+        disableOverlayClose={true}
+        disableScrolling={true}
+        disableScrollParentFix={true}
+        // getHelpers = {}
+        hideBackButton={true}
+        run={true}
+        // scrollOffset = {1}
+        // scrollDuration ={}
+        scrollToFirstStep={true}
+        // showSkipButton={false}
+        showProgress={true}
+        spotlightClicks={true}
+        // spotlightPadding ={}
+        // steps={never[]}
 
-                continuous={true}
-                debug={true}
-                disableCloseOnEsc={true}
-                disableOverlay={true}
-                disableOverlayClose={true}
-                disableScrolling={true}
-                disableScrollParentFix={true}
-                // getHelpers = {}
-                hideBackButton={true}
-                run={true}
-                // scrollOffset = {1}
-                // scrollDuration ={}
-                scrollToFirstStep={true}
-                // showSkipButton={false}
-                showProgress={true}
-                spotlightClicks={true}
-            // spotlightPadding ={}
-            // steps={never[]}
-
-            // callback: (data: CallBackProps) => void;
-            // * Keydown event listener
-            // handleKeyboard: (event: KeyboardEvent) => void;
-            // * Sync the store with the component's state
-            // syncState: (state: State) => void;
-            // setPopper: Props$1['getPopper'];
-            // scrollToStep(previousState: State): void;
-            // render(): React.JSX.Element | null;
-            />
-        </>
-    )
-}
-
+        // callback: (data: CallBackProps) => void;
+        // * Keydown event listener
+        // handleKeyboard: (event: KeyboardEvent) => void;
+        // * Sync the store with the component's state
+        // syncState: (state: State) => void;
+        // setPopper: Props$1['getPopper'];
+        // scrollToStep(previousState: State): void;
+        // render(): React.JSX.Element | null;
+      />
+    </>
+  );
+};
 
 const dashboardItems = [
-  { id: 2, label: "Farmex Marketplace", icon: <ShoppingBagIcon className="w-6 h-6 text-blue-500" />, href: "/dashboard/farmex-marketplace" },
-  { id: 4, label: "Farm Guard", icon: <FarmGuardIcon />, href: "/dashboard/farm-guard" },
-  { id: 4, label: "Farmex Manager", icon: <WorkflowIcon />, href: "/dashboard/farmex-manager" },
-  { id: 5, label: "Crop Analytics", icon: <AnalyticsIcon className="w-6 h-6 text-green-500" />, href: "/dashboard/crop-analytics" },
-  { id: 6, label: "Marketing Insights", icon: <MarketingIcon />, href: "/dashboard/marketing-pro" },
-  { id: 7, label: "Customer Management", icon: <CRMIcon />, href: "/dashboard/farm-customer-management" },
-  { id: 8, label: "Workflows & Integrations", icon: <WorkflowIcon />, href: "/dashboard/farmex-workflows" },
+  {
+    id: 2,
+    label: 'Farmex Marketplace',
+    icon: <ShoppingBagIcon className="w-6 h-6 text-blue-500" />,
+    href: '/dashboard/farmex-marketplace'
+  },
+  {
+    id: 4,
+    label: 'Farm Guard',
+    icon: <FarmGuardIcon />,
+    href: '/dashboard/farm-guard'
+  },
+  {
+    id: 4,
+    label: 'Farmex Manager',
+    icon: <WorkflowIcon />,
+    href: '/dashboard/farmex-manager'
+  },
+  {
+    id: 5,
+    label: 'Crop Analytics',
+    icon: <AnalyticsIcon className="w-6 h-6 text-green-500" />,
+    href: '/dashboard/crop-analytics'
+  },
+  {
+    id: 6,
+    label: 'Marketing Insights',
+    icon: <MarketingIcon />,
+    href: '/dashboard/marketing-pro'
+  },
+  {
+    id: 7,
+    label: 'Customer Management',
+    icon: <CRMIcon />,
+    href: '/dashboard/farm-customer-management'
+  },
+  {
+    id: 8,
+    label: 'Workflows & Integrations',
+    icon: <WorkflowIcon />,
+    href: '/dashboard/farmex-workflows'
+  }
 ];
 
 // Cog Settings - Creative Tools, Demographics. Templates.
-
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   const pathname = usePathname();
@@ -114,9 +142,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   const trigger = useRef<any>(null);
   const sidebar = useRef<any>(null);
 
-  let storedSidebarExpanded = "true";
+  let storedSidebarExpanded = 'true';
   const [sidebarExpanded, setSidebarExpanded] = useState(
-    storedSidebarExpanded === null ? false : storedSidebarExpanded === "true"
+    storedSidebarExpanded === null ? false : storedSidebarExpanded === 'true'
   );
 
   // close on click outside
@@ -131,8 +159,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
         return;
       setSidebarOpen(false);
     };
-    document.addEventListener("click", clickHandler);
-    return () => document.removeEventListener("click", clickHandler);
+    document.addEventListener('click', clickHandler);
+    return () => document.removeEventListener('click', clickHandler);
   });
 
   // close if the esc key is pressed
@@ -141,26 +169,26 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       if (!sidebarOpen || keyCode !== 27) return;
       setSidebarOpen(false);
     };
-    document.addEventListener("keydown", keyHandler);
-    return () => document.removeEventListener("keydown", keyHandler);
+    document.addEventListener('keydown', keyHandler);
+    return () => document.removeEventListener('keydown', keyHandler);
   });
 
   useEffect(() => {
-    localStorage.setItem("sidebar-expanded", sidebarExpanded.toString());
+    localStorage.setItem('sidebar-expanded', sidebarExpanded.toString());
     if (sidebarExpanded) {
-      document.querySelector("body")?.classList.add("sidebar-expanded");
+      document.querySelector('body')?.classList.add('sidebar-expanded');
     } else {
-      document.querySelector("body")?.classList.remove("sidebar-expanded");
+      document.querySelector('body')?.classList.remove('sidebar-expanded');
     }
   }, [sidebarExpanded]);
 
   return (
     <aside
       ref={sidebar}
-      className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 scroll-y-auto ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+      className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 scroll-y-auto ${
+        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+      }`}
     >
-
       <Tour />
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
@@ -211,7 +239,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               {/* <!-- Menu Item Dashboard --> */}
               <SidebarLinkGroup
                 activeCondition={
-                  pathname === "/" || pathname.includes("dashboard")
+                  pathname === '/' || pathname.includes('dashboard')
                 }
               >
                 {(handleClick, open) => {
@@ -219,10 +247,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <React.Fragment>
                       <Link
                         href="#"
-                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${(pathname === "/" ||
-                          pathname.includes("dashboard")) &&
-                          "bg-graydark dark:bg-meta-4"
-                          }`}
+                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                          (pathname === '/' ||
+                            pathname.includes('dashboard')) &&
+                          'bg-graydark dark:bg-meta-4'
+                        }`}
                         onClick={(e) => {
                           e.preventDefault();
                           sidebarExpanded
@@ -257,8 +286,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                         </svg>
                         Dashboard
                         <svg
-                          className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${open && "rotate-180"
-                            }`}
+                          className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${
+                            open && 'rotate-180'
+                          }`}
                           width="20"
                           height="20"
                           viewBox="0 0 20 20"
@@ -293,14 +323,19 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
                         </ul>
                       </div> */}
-                      <div className={`translate transform overflow-hidden ${!open && "hidden"}`}>
+                      <div
+                        className={`translate transform overflow-hidden ${
+                          !open && 'hidden'
+                        }`}
+                      >
                         <ul className="mt-4 mb-5.5 flex flex-col gap-2.5 pl-6">
                           {dashboardItems.map((item) => (
                             <li key={item.id}>
                               <Link
                                 href={item.href}
-                                className={`group events-x-calendar relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${pathname === item.href && "text-white"
-                                  } `}
+                                className={`group events-x-calendar relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
+                                  pathname === item.href && 'text-white'
+                                } `}
                               >
                                 {item.icon}
                                 <span>{item.label}</span>
@@ -309,7 +344,6 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           ))}
                         </ul>
                       </div>
-
 
                       {/* <!-- Dropdown Menu End --> */}
                     </React.Fragment>
@@ -322,9 +356,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li>
                 <Link
                   href="/dashboard/calendar"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("calendar") &&
-                    "bg-graydark dark:bg-meta-4"
-                    }`}
+                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes('calendar') &&
+                    'bg-graydark dark:bg-meta-4'
+                  }`}
                 >
                   <svg
                     className="fill-current"
@@ -348,8 +383,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li>
                 <Link
                   href="/dashboard/profile"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("profile") && "bg-graydark dark:bg-meta-4"
-                    }`}
+                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes('profile') && 'bg-graydark dark:bg-meta-4'
+                  }`}
                 >
                   <svg
                     className="fill-current"
@@ -373,15 +409,15 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               </li>
               {/* <!-- Menu Item Profile --> */}
 
-              
               {/* <!-- Menu Item Forms --> */}
 
               {/* <!-- Menu Item Tables --> */}
               <li>
                 <Link
                   href="/dashboard/tables"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("tables") && "bg-graydark dark:bg-meta-4"
-                    }`}
+                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes('tables') && 'bg-graydark dark:bg-meta-4'
+                  }`}
                 >
                   <svg
                     className="fill-current"
@@ -417,9 +453,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li>
                 <Link
                   href="/dashboard/settings"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("settings") &&
-                    "bg-graydark dark:bg-meta-4"
-                    }`}
+                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes('settings') &&
+                    'bg-graydark dark:bg-meta-4'
+                  }`}
                 >
                   <svg
                     className="fill-current"
@@ -468,8 +505,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li>
                 <Link
                   href="/dashboard/chart"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("chart") && "bg-graydark dark:bg-meta-4"
-                    }`}
+                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes('chart') && 'bg-graydark dark:bg-meta-4'
+                  }`}
                 >
                   <svg
                     className="fill-current"
@@ -505,12 +543,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               </li>
               {/* <!-- Menu Item Chart --> */}
 
-
-
               {/* <!-- Menu Item Auth Pages --> */}
               <SidebarLinkGroup
                 activeCondition={
-                  pathname === "/auth" || pathname.includes("auth")
+                  pathname === '/auth' || pathname.includes('auth')
                 }
               >
                 {(handleClick, open) => {
@@ -518,9 +554,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <React.Fragment>
                       <Link
                         href="#"
-                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${(pathname === "/auth" || pathname.includes("auth")) &&
-                          "bg-graydark dark:bg-meta-4"
-                          }`}
+                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                          (pathname === '/auth' || pathname.includes('auth')) &&
+                          'bg-graydark dark:bg-meta-4'
+                        }`}
                         onClick={(e) => {
                           e.preventDefault();
                           sidebarExpanded
@@ -559,8 +596,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                         </svg>
                         Identity & Access Management
                         <svg
-                          className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${open && "rotate-180"
-                            }`}
+                          className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${
+                            open && 'rotate-180'
+                          }`}
                           width="20"
                           height="20"
                           viewBox="0 0 20 20"
@@ -577,34 +615,37 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       </Link>
                       {/* <!-- Dropdown Menu Start --> */}
                       <div
-                        className={`translate transform overflow-hidden ${!open && "hidden"
-                          }`}
+                        className={`translate transform overflow-hidden ${
+                          !open && 'hidden'
+                        }`}
                       >
                         <ul className="mt-4 mb-5.5 flex flex-col gap-2.5 pl-6">
                           <li>
                             <Link
                               href="/dashboard/settings/"
-                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${pathname === "/auth/signin" && "text-white"
-                                }`}
+                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
+                                pathname === '/auth/signin' && 'text-white'
+                              }`}
                             >
-                             Advanced Custom User Roles
+                              Advanced Custom User Roles
                             </Link>
                           </li>
                           <li>
                             <Link
                               href="/dashboard/settings/"
-                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${pathname === "/auth/signup" && "text-white"
-                                }`}
+                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
+                                pathname === '/auth/signup' && 'text-white'
+                              }`}
                             >
                               Activity Logs
-
                             </Link>
                           </li>
                           <li>
                             <Link
                               href="/dashboard/settings/"
-                              className={`group events-x-calendar relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${pathname === "/auth/signin" && "text-white"
-                                }`}
+                              className={`group events-x-calendar relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
+                                pathname === '/auth/signin' && 'text-white'
+                              }`}
                             >
                               More Identity Management
                             </Link>

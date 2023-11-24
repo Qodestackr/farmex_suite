@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function FarmexProjects() {
-  return (
-    <div>FarmexProjects</div>
-  )
+  return <div>FarmexProjects</div>;
 }
 
-export default FarmexProjects
+export default FarmexProjects;

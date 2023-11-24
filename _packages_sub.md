@@ -22,7 +22,7 @@ Smart Farming Synergy:
 
 A complete smart farming solution integrating marketplace access, resource management, and advanced technologies.
 
-<!-- 
+<!--
 Farmers Plan:
 
 Seedling Package
@@ -41,8 +41,7 @@ AuthAgro Max Plan
 
  -->
 
-
-<!-- 
+<!--
 Farmers Plan:
 Platform:
 

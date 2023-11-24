@@ -1,18 +1,17 @@
-"use client";
-import React from "react";
-import ChartOne from "../Charts/FarmexRevenueChart";
-import ChartThree from "../Charts/FarmexVisitorAnalyticsFunnel";
-import ChartTwo from "../Charts/FarmexProfitChart";
-import ChatCard from "../Chat/ChatCard";
-import TableOne from "../Tables/TableOne";
-import CardDataStats from "../CardDataStats";
-import JoyRide from "react-joyride";
+'use client';
+import React from 'react';
+import ChartOne from '../Charts/FarmexRevenueChart';
+import ChartThree from '../Charts/FarmexVisitorAnalyticsFunnel';
+import ChartTwo from '../Charts/FarmexProfitChart';
+import ChatCard from '../Chat/ChatCard';
+import TableOne from '../Tables/TableOne';
+import CardDataStats from '../CardDataStats';
+import JoyRide from 'react-joyride';
 
-import dynamic from "next/dynamic";
-const MapOne = dynamic(() => import("../Maps/MapOne"), {
-  ssr: false,
+import dynamic from 'next/dynamic';
+const MapOne = dynamic(() => import('../Maps/MapOne'), {
+  ssr: false
 });
-
 
 const TOUR_STEPS = [
   {
@@ -22,25 +21,25 @@ You can choose to start the tour immediately after the page loads without clicki
 
 Pass a prop called disableBeacon: true to the first step of the step array.
      */
-    target: ".tour-logo",
-    content: "This is the App logo",
+    target: '.tour-logo',
+    content: 'This is the App logo'
   },
   {
-    target: ".tour-login",
-    content: "View the login button",
+    target: '.tour-login',
+    content: 'View the login button'
   },
   {
-    target: ".tour-post",
-    content: "here is the post card",
+    target: '.tour-post',
+    content: 'here is the post card'
   },
   {
-    target: ".tour-contact",
-    content: "this is the contact form",
+    target: '.tour-contact',
+    content: 'this is the contact form'
   },
   {
-    target: ".tour-footer",
-    content: "see our footer",
-  },
+    target: '.tour-footer',
+    content: 'see our footer'
+  }
 ];
 
 const ECommerce: React.FC = () => {
@@ -52,14 +51,14 @@ const ECommerce: React.FC = () => {
         showSkipButton={true}
         styles={{
           tooltipContainer: {
-              textAlign: "left"
-            },
+            textAlign: 'left'
+          },
           buttonNext: {
-              backgroundColor: "green"
-            },
+            backgroundColor: 'green'
+          },
           buttonBack: {
-              marginRight: 10
-            }
+            marginRight: 10
+          }
         }}
       />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">

@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export default function FarmexMarketingPro() {
-  return (
-    <div>Farmex Marketing Pro</div>
-  )
+  return <div>Farmex Marketing Pro</div>;
 }

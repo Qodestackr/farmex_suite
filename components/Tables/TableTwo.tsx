@@ -1,39 +1,39 @@
-import Image from "next/image";
-import { Product } from "../../types/product";
+import Image from 'next/image';
+import { Product } from '../../types/product';
 
 const productData: Product[] = [
   {
-    image: "/images/product/product-01.png",
-    name: "Milk 10L qtty",
-    category: "Milk",
+    image: '/images/product/product-01.png',
+    name: 'Milk 10L qtty',
+    category: 'Milk',
     price: 296,
     sold: 22,
-    profit: 45,
+    profit: 45
   },
   {
-    image: "/images/product/product-02.png",
-    name: "Milk 20L qtty",
-    category: "Milk",
+    image: '/images/product/product-02.png',
+    name: 'Milk 20L qtty',
+    category: 'Milk',
     price: 546,
     sold: 12,
-    profit: 125,
+    profit: 125
   },
   {
-    image: "/images/product/product-03.png",
-    name: "Milk 30L qtty",
-    category: "Milk",
+    image: '/images/product/product-03.png',
+    name: 'Milk 30L qtty',
+    category: 'Milk',
     price: 443,
     sold: 64,
-    profit: 247,
+    profit: 247
   },
   {
-    image: "/images/product/product-04.png",
-    name: "Milk 40L qtty",
-    category: "Milk",
+    image: '/images/product/product-04.png',
+    name: 'Milk 40L qtty',
+    category: 'Milk',
     price: 499,
     sold: 72,
-    profit: 103,
-  },
+    profit: 103
+  }
 ];
 
 const TableTwo = () => {
