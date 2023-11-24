@@ -46,8 +46,8 @@ const Drag = (): void => {
       }
     });
 
-    // return closestTask;
+    return closestTask;
   };
 };
 
-// export default Drag;
+export default Drag;
