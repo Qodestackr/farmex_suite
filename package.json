@@ -20,11 +20,8 @@
       "next lint",
       "tsc --noEmit"
     ],
-    "*.{js,jsx,ts,tsx,json,md}": [
-      "npx prettier --write",
-      "git add"
-    ]
-  },  
+    "*.{js,jsx,ts,tsx,json,md}": "npx prettier --write"
+  },   
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@react-jvectormap/core": "^1.0.4",
