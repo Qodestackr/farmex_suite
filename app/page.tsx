@@ -62,9 +62,9 @@ export const metadata: Metadata &
       }
     ],
     contact: {
-      email: 'gis@farmexcloud.com',
+      email: 'gis@farmexsuite.com',
       phone: '+1234567890',
-      website: 'https://www.farmexcloud.com/gis'
+      website: 'https://www.farmexsuite.com/gis'
     }
   },
 
@@ -107,33 +107,33 @@ export default function Home() {
             <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
               <div className="w-full sm:w-auto">
                 <label htmlFor="hero-input" className="sr-only">
-                  Search
+                  Request a Demo
                 </label>
                 <input
                   type="text"
                   id="hero-input"
                   name="hero-input"
                   className="py-3 px-4 block w-full xl:min-w-[18rem] border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                  placeholder="Enter work email"
+                  placeholder="Enter your email"
                 />
               </div>
               <a
-                className="w-full bg-primary sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                className="w-full bg-success sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                 href="#"
               >
-                Request demo
+                Request Demo
               </a>
             </div>
 
             <div className="mt-6 lg:mt-12">
-              <span className="text-xs font-medium text-gray-800 uppercase dark:text-gray-200">
+              <span className="text-xs font-medium text-success uppercase dark:text-gray-200">
                 {/* Trusted by: */}
                 Cultivating Success, Field by Field:
               </span>
 
               <div className="mt-4 flex gap-x-8">
                 {/* TODO Company Logos */}
-                We Pioneer Sustainable Agriculture Solutions
+                We Pioneer Sustainable Agriculture Solutions with Tech.
               </div>
             </div>
 
