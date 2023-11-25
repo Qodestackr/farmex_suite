@@ -35,7 +35,7 @@ function SearchModal({ id, searchId, modalOpen, setModalOpen }: any) {
   return (
     <>
       {/* Modal backdrop */}
-      <Transition
+      {/* <Transition
         className="fixed inset-0 bg-slate-900 bg-opacity-30 z-50 transition-opacity"
         show={modalOpen}
         enter="transition ease-out duration-200"
@@ -45,7 +45,7 @@ function SearchModal({ id, searchId, modalOpen, setModalOpen }: any) {
         leaveStart="opacity-100"
         leaveEnd="opacity-0"
         aria-hidden="true"
-      />
+      /> */}
       {/* Modal dialog */}
       {/* <Transition
         id={id}
