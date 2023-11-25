@@ -20,8 +20,7 @@ function PricingTab(props: PricingTabProps) {
       <div className="relative flex flex-col h-full p-6 rounded-2xl  dark:bg-slate-900 border border-slate-200 dark:border-slate-900 shadow shadow-slate-950/5">
         {props.popular && (
           <div className="absolute top-0 right-0 mr-6 -mt-4">
-            <div 
-            className="inline-flex items-center text-xs bg-primary text-white font-semibold p-2 rounded-full shadow-sm shadow-slate-950/5">
+            <div className="inline-flex items-center text-xs bg-primary text-white font-semibold p-2 rounded-full shadow-sm shadow-slate-950/5">
               Most Popular
             </div>
           </div>
@@ -32,15 +31,13 @@ function PricingTab(props: PricingTabProps) {
           </div>
           <div className="inline-flex items-baseline mb-2">
             <span className="text-slate-900 dark:text-slate-200 font-bold text-3xl">
-              KES. {" "}
+              KES.{' '}
             </span>
             <span className="text-slate-900 dark:text-slate-200 font-bold text-4xl">
               {props.yearly ? props.price.yearly : props.price.monthly}
             </span>
             <span className="text-slate-500 font-medium">
-              {
-                props?.yearly ? " /yr" : " /mo"
-              }
+              {props?.yearly ? ' /yr' : ' /mo'}
             </span>
           </div>
           <div className="text-sm text-slate-500 mb-5">
@@ -54,7 +51,7 @@ function PricingTab(props: PricingTabProps) {
           </a>
         </div>
         <div className="text-slate-900 dark:text-slate-200 font-medium mb-3">
-          Includes:
+        Access Exclusive:
         </div>
         <ul className="text-slate-600 dark:text-slate-400 text-sm space-y-3 grow">
           {props.features.map((feature, index) => {
@@ -97,7 +94,9 @@ export default function PricingTable() {
           </span>
           <button
             className={`mx-1 relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out ${
-              yearly ? 'bg-success text-white' : 'bg-primary text-slate-500 dark:text-slate-400 text-white'
+              yearly
+                ? 'bg-success text-white'
+                : 'bg-primary text-slate-500 dark:text-slate-400 text-white'
             }`}
             onClick={() => setYearly(true)}
             // aria-pressed={isAnnual}
@@ -115,7 +114,9 @@ export default function PricingTable() {
           </button>
           <button
             className={`mx-1 relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out ${
-              yearly ? 'text-slate-500 dark:text-slate-400 bg-primary text-white' : 'bg-success text-white'
+              yearly
+                ? 'text-slate-500 dark:text-slate-400 bg-primary text-white'
+                : 'bg-success text-white'
             }`}
             onClick={() => setYearly(false)}
             // aria-pressed={isAnnual}
@@ -129,14 +130,17 @@ export default function PricingTable() {
         {/* Pricing tab 1 */}
         <PricingTab
           yearly={yearly}
-          planName="Essential"
+          planName="Harvest Precision"
           price={{ yearly: 6800, monthly: 780 }}
-          planDescription="There are many variations available, but the majority have suffered."
+          planDescription={`The Harvest Pro Complete plan encompasses All-In-One farm management, integrated Marketplace access, and fundamental Analytics. Tailored for farms seeking a comprehensive solution for efficiency and growth.`}
           features={[
-            'Unlimited placeholder texts',
-            'Consectetur adipiscing elit',
-            'Excepteur sint occaecat cupidatat',
-            'Officia deserunt mollit anim'
+            'All-In-One farm management',
+            'Integrated Marketplace access',
+            'Fundamental Analytics',
+            'Real-time Crop Health Monitoring',
+            'Cost-Effective Scouting Solutions',
+            'Efficient Soil Testing',
+            'Optimized Seed and Fertilizer Usage'
           ]}
         />
 
@@ -144,31 +148,34 @@ export default function PricingTable() {
         <PricingTab
           yearly={yearly}
           popular={true}
-          planName="Perform"
+          planName="EcoTech AgriSuite"
           price={{ yearly: 9400, monthly: 920 }}
-          planDescription="There are many variations available, but the majority have suffered."
+          planDescription={`Unleash the full potential of precision agriculture with EcoTech AgriSuite. Enjoy all the features of Harvest Precision, plus advanced energy management, sustainability solutions, and end-to-end workflows. Crafted for farms seeking a comprehensive, eco-friendly approach to modern agriculture.`}
           features={[
-            'Unlimited placeholder texts',
-            'Consectetur adipiscing elit',
-            'Excepteur sint occaecat cupidatat',
-            'Officia deserunt mollit anim',
-            'Predefined chunks as necessary'
+            'All features in Harvest Precision plan',
+            'Advanced Energy Management',
+            'Sustainability Solutions',
+            'End-to-End Workflows',
+            'Enhanced Precision Farming Tools',
+            'Eco-Friendly Crop Advisories',
+            'Carbon Footprint Tracking'
           ]}
         />
 
         {/* Pricing tab 3 */}
         <PricingTab
           yearly={yearly}
-          planName="Enterprise"
+          planName="Precision Elite"
           price={{ yearly: 12000, monthly: 1350 }}
-          planDescription="There are many variations available, but the majority have suffered."
+          planDescription={`Elevate your farm's precision and efficiency with the Precision Elite plan. This top-tier offering includes advanced GIS, Machine Learning capabilities, and expanded custom storage options. Crafted for farms demanding the highest level of technology and customization.`}
           features={[
-            'Unlimited placeholder texts',
-            'Consectetur adipiscing elit',
-            'Excepteur sint occaecat cupidatat',
-            'Officia deserunt mollit anim',
-            'Predefined chunks as necessary',
-            'Free from repetition'
+            'All previous features & benefits',
+            'Advanced GIS',
+            'Machine Learning Capabilities',
+            'Expanded Custom Storage Options',
+            'Tailored Technology Solutions',
+            'Data-Driven Sustainability',
+            'Expert Consultation Access'
           ]}
         />
       </div>
