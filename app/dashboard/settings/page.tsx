@@ -14,7 +14,6 @@ export const metadata: Metadata &
     'farm management',
     'agtech marketplace'
   ],
-  image: '/path/to/your/image.jpg',
   url: 'https://www.yourfarmexcloudwebsite.com',
   author: 'FarmexCloud Team',
   twitterUsername: '@FarmexCloud',

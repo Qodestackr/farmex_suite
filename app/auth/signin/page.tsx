@@ -16,7 +16,6 @@ export const metadata: Metadata &
     'farm management',
     'agtech marketplace'
   ],
-  image: '/path/to/your/image.jpg',
   url: 'https://www.yourfarmexcloudwebsite.com',
   author: 'FarmexCloud Team',
   twitterUsername: '@FarmexCloud',
@@ -105,8 +104,7 @@ const SignIn: React.FC = () => {
               </Link>
 
               <p className="2xl:px-20">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                suspendisse.
+               Login to Farmex Suite.
               </p>
 
               <span className="mt-15 inline-block">

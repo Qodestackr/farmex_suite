@@ -7,10 +7,12 @@ export default function SubscribeNewsletter() {
       <div className="p-6 container md:w-2/3 xl:w-auto mx-auto  flex flex-col xl:items-stretch justify-between xl:flex-row">
         <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative h-auto flex items-center justify-center">
           <Image
-            src="https://cdn.tuk.dev/assets/components/26May-update/newsletter-1.png"
+            src=""
             alt="Envelope with a newsletter"
             role="img"
             className="h-full xl:w-full lg:w-1/2 w-full "
+            width={200}
+            height={300}
           />
         </div>
         <div className="w-full xl:w-1/2 xl:pl-40 xl:py-28 ">

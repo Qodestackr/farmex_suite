@@ -104,8 +104,7 @@ const SignUp: React.FC = () => {
                 </h1>
               </Link>
               <p className="2xl:px-20">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                suspendisse.
+                Signup to Farmex Suite | Start up with a free tier.
               </p>
 
               <span className="mt-15 inline-block">

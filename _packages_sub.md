@@ -146,3 +146,29 @@ Custom Connection:
 Custom connections and integrations.
 This breakdown provides a tiered approach to your SaaS packages, offering increasing levels of features and capabilities as users move up the plans.
  -->
+
+
+
+
+THEMES:
+#074c3f
+#096328
+#29994f
+
+<!-- 
+Primary Green (#074c3f): This deep, dark green can serve as the primary color for backgrounds and headers, providing a sense of depth and sophistication.
+
+Accent Green (#096328): A slightly lighter shade, perfect for accents, buttons, and highlighting key elements on your website.
+
+Highlight Green (#29994f): A vibrant and refreshing green, ideal for calls to action, links, and other elements that you want to draw attention to.
+
+Now, let's add a couple of supporting colors to complete the theme:
+
+Dark Slate Gray (#2F4F4F): A dark neutral color that complements the deep primary green. This can be used for text or background contrast.
+
+Steel Blue (#4682B4): A muted blue-gray that can add variety to the color palette. Use it for secondary elements or as an alternative to black.
+
+Creamy White (#FFF8E1): A light, warm white that can be used for backgrounds or to add a touch of brightness to the design.
+
+These colors together create a balanced and harmonious theme. Feel free to adjust the shades or let me know if you have specific preferences!
+-->

@@ -17,10 +17,11 @@ interface PricingTabProps {
 function PricingTab(props: PricingTabProps) {
   return (
     <div className={`h-full ${props.popular ? 'dark' : ''}`}>
-      <div className="relative flex flex-col h-full p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900 shadow shadow-slate-950/5">
+      <div className="relative flex flex-col h-full p-6 rounded-2xl  dark:bg-slate-900 border border-slate-200 dark:border-slate-900 shadow shadow-slate-950/5">
         {props.popular && (
           <div className="absolute top-0 right-0 mr-6 -mt-4">
-            <div className="inline-flex items-center text-xs font-semibold py-1.5 px-3 bg-emerald-500 text-white rounded-full shadow-sm shadow-slate-950/5">
+            <div 
+            className="inline-flex items-center text-xs bg-primary text-white font-semibold p-2 rounded-full shadow-sm shadow-slate-950/5">
               Most Popular
             </div>
           </div>
@@ -31,18 +32,22 @@ function PricingTab(props: PricingTabProps) {
           </div>
           <div className="inline-flex items-baseline mb-2">
             <span className="text-slate-900 dark:text-slate-200 font-bold text-3xl">
-              $
+              KES. {" "}
             </span>
             <span className="text-slate-900 dark:text-slate-200 font-bold text-4xl">
               {props.yearly ? props.price.yearly : props.price.monthly}
             </span>
-            <span className="text-slate-500 font-medium">/mo</span>
+            <span className="text-slate-500 font-medium">
+              {
+                props?.yearly ? " /yr" : " /mo"
+              }
+            </span>
           </div>
           <div className="text-sm text-slate-500 mb-5">
             {props.planDescription}
           </div>
           <a
-            className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
+            className="w-full bg-[#096328] text-white inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-3 text-sm font-medium  shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
             href="#0"
           >
             Purchase Plan
@@ -78,8 +83,8 @@ export default function PricingTable() {
   return (
     <div>
       {/* Pricing toggle */}
-      <div className="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-16">
-        <div className="relative flex w-full p-1 bg-white dark:bg-slate-900 rounded-full">
+      <div className="flex justify-center  max-w-[14rem] m-auto mb-8 lg:mb-16 ">
+        <div className="relative  flex w-full p-1  dark:bg-slate-900 rounded-full">
           <span
             className="absolute inset-0 m-1 pointer-events-none"
             aria-hidden="true"
@@ -91,8 +96,8 @@ export default function PricingTable() {
             ></span>
           </span>
           <button
-            className={`relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out ${
-              yearly ? 'text-white' : 'text-slate-500 dark:text-slate-400'
+            className={`mx-1 relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out ${
+              yearly ? 'bg-success text-white' : 'bg-primary text-slate-500 dark:text-slate-400 text-white'
             }`}
             onClick={() => setYearly(true)}
             // aria-pressed={isAnnual}
@@ -101,7 +106,7 @@ export default function PricingTable() {
             <span
               className={`${
                 yearly
-                  ? 'text-indigo-200'
+                  ? 'text-indigo-200 '
                   : 'text-slate-400 dark:text-slate-500'
               }`}
             >
@@ -109,8 +114,8 @@ export default function PricingTable() {
             </span>
           </button>
           <button
-            className={`relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out ${
-              yearly ? 'text-slate-500 dark:text-slate-400' : 'text-white'
+            className={`mx-1 relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out ${
+              yearly ? 'text-slate-500 dark:text-slate-400 bg-primary text-white' : 'bg-success text-white'
             }`}
             onClick={() => setYearly(false)}
             // aria-pressed={isAnnual}
@@ -125,7 +130,7 @@ export default function PricingTable() {
         <PricingTab
           yearly={yearly}
           planName="Essential"
-          price={{ yearly: 29, monthly: 35 }}
+          price={{ yearly: 6800, monthly: 780 }}
           planDescription="There are many variations available, but the majority have suffered."
           features={[
             'Unlimited placeholder texts',
@@ -140,7 +145,7 @@ export default function PricingTable() {
           yearly={yearly}
           popular={true}
           planName="Perform"
-          price={{ yearly: 49, monthly: 55 }}
+          price={{ yearly: 9400, monthly: 920 }}
           planDescription="There are many variations available, but the majority have suffered."
           features={[
             'Unlimited placeholder texts',
@@ -155,7 +160,7 @@ export default function PricingTable() {
         <PricingTab
           yearly={yearly}
           planName="Enterprise"
-          price={{ yearly: 79, monthly: 85 }}
+          price={{ yearly: 12000, monthly: 1350 }}
           planDescription="There are many variations available, but the majority have suffered."
           features={[
             'Unlimited placeholder texts',

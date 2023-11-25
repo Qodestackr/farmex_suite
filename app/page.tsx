@@ -11,6 +11,7 @@ import Th from '../components/Tables/Th';
 import CookiesBanner from '../components/CookiesBanner/CookiesBanner';
 import CardDataStats from '../components/CardDataStats';
 import WriteAComment from '../components/write-a-comment';
+import Headerzz from '../components/Headerzz';
 
 export const metadata: Metadata &
   Record<string, any> /**to include an image */ = {
@@ -90,22 +91,18 @@ export default function Home() {
       {/* <ModalVideo thumb={"/"} thumbWidth={7} thumbHeight={10} thumbAlt={"Modal Video"} video={""} videoWidth={30} videoHeight={40} /> */}
 
       <FeatureList />
-      {/* Industry Stats */}
-      <IndustryStats />
+      {/* <IndustryStats /> */}
 
       {/* <CookiesBanner /> */}
       {/* <CardDataStats title={"Title"} total={"199"} rate={"6"} children={<p>Hello Card Status</p>}>
       </CardDataStats> */}
 
-      <PartnershipLogos />
+      {/* <PartnershipLogos /> */}
 
-      <SubscribeNewsletter />
+      {/* <SubscribeNewsletter /> */}
 
-      {/* Components */}
-      <DefaultTable />
-
-      <Th />
-      <WriteAComment />
+      {/* <Th /> */}
+      {/* <WriteAComment /> */}
     </>
   );
 }

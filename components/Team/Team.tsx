@@ -21,9 +21,11 @@ function Team() {
                 <div className="absolute -mt-20 w-full flex justify-center">
                   <div className="h-32 w-32">
                     <Image
-                      src="https://cdn.tuk.dev/assets/photo-1564061170517-d3907caa96ea.jfif"
+                      src=""
                       alt=""
                       className="rounded-full object-cover h-full w-full shadow-md"
+                      width={200}
+                      height={300}
                     />
                   </div>
                 </div>
@@ -112,9 +114,11 @@ function Team() {
                 <div className="absolute -mt-20 w-full flex justify-center">
                   <div className="h-32 w-32">
                     <Image
-                      src="https://cdn.tuk.dev/assets/photo-1530577197743-7adf14294584.jfif"
+                      src=""
                       alt=""
                       className="rounded-full object-cover h-full w-full shadow-md"
+                      width={200}
+                      height={300}
                     />
                   </div>
                 </div>
@@ -203,9 +207,11 @@ function Team() {
                 <div className="absolute -mt-20 w-full flex justify-center">
                   <div className="h-32 w-32">
                     <Image
-                      src="https://cdn.tuk.dev/assets/photo-1566753323558-f4e0952af115.jfif"
+                      src=""
                       alt=""
                       className="rounded-full object-cover h-full w-full shadow-md"
+                      width={200}
+                      height={300}
                     />
                   </div>
                 </div>
@@ -294,9 +300,11 @@ function Team() {
                 <div className="absolute -mt-20 w-full flex justify-center">
                   <div className="h-32 w-32">
                     <Image
-                      src="https://cdn.tuk.dev/assets/boy-smiling_23-2148155640.jpg"
+                      src=""
                       alt=""
                       className="rounded-full object-cover h-full w-full shadow-md"
+                      width={200}
+                      height={300}
                     />
                   </div>
                 </div>
@@ -384,9 +392,11 @@ function Team() {
                 <div className="absolute -mt-20 w-full flex justify-center">
                   <div className="h-32 w-32">
                     <Image
-                      src="https://cdn.tuk.dev/assets/blond-man-happy-expression_1194-2873.jpg"
+                      src=""
                       alt=""
                       className="rounded-full object-cover h-full w-full shadow-md"
+                      width={200}
+                      height={300}
                     />
                   </div>
                 </div>
@@ -475,9 +485,11 @@ function Team() {
                 <div className="absolute -mt-20 w-full flex justify-center">
                   <div className="h-32 w-32">
                     <Image
-                      src="https://cdn.tuk.dev/assets/photo-1570211776045-af3a51026f4a.jfif"
+                      src=""
                       alt=""
                       className="rounded-full object-cover h-full w-full shadow-md"
+                      width={200}
+                      height={300}
                     />
                   </div>
                 </div>

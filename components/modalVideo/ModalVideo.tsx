@@ -44,6 +44,8 @@ export default function ModalVideo({
           height={thumbHeight}
           priority
           alt={thumbAlt}
+          width={200}
+          height={300}
         />
         {/* Play icon */}
         <svg

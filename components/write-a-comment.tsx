@@ -42,10 +42,12 @@ export default function WriteAComment() {
               <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold">
                 <Image
                   className="mr-2 w-6 h-6 rounded-full"
-                  src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
-                  alt="Michael Gough"
+                  src=""
+                  alt="Wilson Gichu"
+                  width={200}
+                  height={300}
                 />
-                Michael Gough
+                Wilson Gichu
               </p>
               {/* <p className="text-sm text-gray-600 dark:text-gray-400"><time pubdate datetime="2022-02-08"
                                 title="February 8th, 2022">Feb. 8, 2022</time></p> */}
@@ -139,8 +141,10 @@ export default function WriteAComment() {
               <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold">
                 <Image
                   className="mr-2 w-6 h-6 rounded-full"
-                  src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                  src=""
                   alt="Jese Leos"
+                  width={200}
+                  height={300}
                 />
                 Jese Leos
               </p>
@@ -233,8 +237,10 @@ export default function WriteAComment() {
               <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold">
                 <Image
                   className="mr-2 w-6 h-6 rounded-full"
-                  src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+                  src=""
                   alt="Bonnie Green"
+                  width={200}
+                  height={300}
                 />
                 Bonnie Green
               </p>
@@ -328,8 +334,10 @@ export default function WriteAComment() {
               <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold">
                 <Image
                   className="mr-2 w-6 h-6 rounded-full"
-                  src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                  src=""
                   alt="Helene Engels"
+                  width={200}
+                  height={300}
                 />
                 Helene Engels
               </p>

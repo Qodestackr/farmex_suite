@@ -1,32 +1,3 @@
-// import React from 'react'
-// import Link from 'next/link'
-
-// function _404() {
-//   return (
-//     <div className="text-center">
-//       <h1 className="mb-4 text-6xl font-semibold text-red-500">404</h1>
-//       <p className="mb-4 text-lg text-gray-600">Oops! It seems like you&apos;ve taken a wrong turn.</p>
-//       <div className="animate-bounce">
-//         <svg className="mx-auto h-16 w-16 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-//           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-//         </svg>
-//       </div>
-
-//       <p className="mt-4 text-gray-600">
-//         <Link
-//           href="/"
-//           className="inline-flex items-center px-6 justify-center rounded-full bg-black mx-2 py-4 text-center font-medium text-white hover:bg-opacity-90 lg:px-16 xl:px-18"
-//         >
-//           Go Back
-//         </Link>
-//       </p>
-//     </div>
-
-//   )
-// }
-
-// export default _404
-
 import Image from 'next/image';
 import React from 'react';
 
@@ -36,18 +7,24 @@ const Error10 = () => {
       <div className="w-full lg:w-1/2">
         <Image
           className="hidden lg:block"
-          src="https://i.ibb.co/v30JLYr/Group-192-2.png"
+          src=""
           alt=""
+          width={200}
+          height={300}
         />
         <Image
           className="hidden md:block lg:hidden"
-          src="https://i.ibb.co/c1ggfn2/Group-193.png"
+          src=""
           alt=""
+          width={200}
+          height={300}
         />
         <Image
           className="md:hidden"
-          src="https://i.ibb.co/8gTVH2Y/Group-198.png"
+          src=""
           alt=""
+          width={200}
+          height={300}
         />
       </div>
       <div className="w-full lg:w-1/2">
@@ -63,7 +40,7 @@ const Error10 = () => {
           go.
         </p>
         <button className="w-full lg:w-auto my-4 border rounded-md px-1 sm:px-16 py-5 bg-black text-whiter hover:bg-black 0 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-opacity-50">
-          Go back to Homepage
+          Go Home
         </button>
       </div>
     </div>

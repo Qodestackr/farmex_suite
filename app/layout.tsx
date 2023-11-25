@@ -7,6 +7,7 @@ import Loader from '../components/common/Loader';
 
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
+import Headerzz from '../components/Headerzz';
 
 export default function RootLayout({
   children
@@ -31,10 +32,8 @@ export default function RootLayout({
             <Loader />
           ) : (
             <div className="flex h-screen overflow-hidden">
-              {/* <!-- ===== Content Area Start ===== --> */}
               <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
-                {/* <!-- ===== Header Start ===== --> */}
-                {isAuthenticated ? (
+                {/* {isAuthenticated ? (
                   <Header
                     sidebarOpen={sidebarOpen}
                     setSidebarOpen={setSidebarOpen}
@@ -43,20 +42,22 @@ export default function RootLayout({
                   <Header
                     sidebarOpen={sidebarOpen}
                     setSidebarOpen={setSidebarOpen}
-                    isDashboard={false}
+                    // isDashboard={false}
                   />
-                )}
-                {/* <!-- ===== Header End ===== --> */}
+                )} */}
+                <Headerzz />
 
-                {/* <!-- ===== Main Content Start ===== --> */}
+                {/* <Header
+                    sidebarOpen={sidebarOpen}
+                    setSidebarOpen={setSidebarOpen}
+                  /> */}
+
                 <main>
                   <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
                     {children}
                   </div>
                 </main>
-                {/* <!-- ===== Main Content End ===== --> */}
               </div>
-              {/* <!-- ===== Content Area End ===== --> */}
             </div>
           )}
         </div>
