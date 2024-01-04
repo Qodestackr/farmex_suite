@@ -1,182 +1,297 @@
 'use client';
-
-import { useState } from 'react';
-
-import Image from 'next/image';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import DarkModeSwitcher from './DarkModeSwitcher';
-import DropdownMessage from './DropdownMessage';
-import DropdownNotification from './DropdownNotification';
-import DropdownUser from './DropdownUser';
-import DashboardHelp from '../Dashboard/_components/DashboardHelp';
-import SearchModal from '../Search/ModalSearch';
 
-const Header = (props: {
-  sidebarOpen: string | boolean | undefined;
-  setSidebarOpen: (arg0: boolean) => void;
-  isDashboard?: boolean;
-}) => {
-  const [searchModalOpen, setSearchModalOpen] = useState(false);
+export const navTopLinks = [
+  {
+    name: 'Pricing',
+    href: '/pricing'
+  },
+  {
+    name: 'Farmex Platform',
+    href: '/farmex-platform'
+  },
+  {
+    name: 'Features',
+    href: '/features'
+  },
+  {
+    name: 'Talk to a Consultant',
+    href: '/consulatation-request'
+  }
+];
 
-  const isAuthenticated = false;
+export const navBottomLinks = [
+  {
+    name: 'Farmex Guard',
+    href: '/farmex-guard'
+  },
+  {
+    name: 'Farmex Marketplace',
+    href: '/' // Todo, Move into new subdomain
+  },
+  {
+    name: 'Farmex Analytics',
+    href: '/'
+  },
+  {
+    name: 'Technology & Sustainability',
+    href: '/'
+  }
+];
 
+export const navProductsList = [
+  {
+    name: "About",
+    href: "/"
+  },
+  {
+    name: "About",
+    href: "/"
+  },
+  {
+    name: "About",
+    href: "/"
+  },
+]
+
+export default function Headerzz() {
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown((prevDropdownState) => !prevDropdownState);
+  };
   return (
-    <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
-      <div className="flex flex-grow items-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11">
-        <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
-          <button
-            aria-controls="sidebar"
-            onClick={(e) => {
-              e.stopPropagation();
-              props.setSidebarOpen(!props.sidebarOpen);
-            }}
-            className="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden"
-          >
-            <span className="relative block h-5.5 w-5.5 cursor-pointer">
-              <span className="du-block absolute right-0 h-full w-full">
-                <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${
-                    !props.sidebarOpen && '!w-full delay-300'
-                  }`}
-                ></span>
-                <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${
-                    !props.sidebarOpen && 'delay-400 !w-full'
-                  }`}
-                ></span>
-                <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${
-                    !props.sidebarOpen && '!w-full delay-500'
-                  }`}
-                ></span>
-              </span>
-              <span className="absolute right-0 h-full w-full rotate-45">
-                <span
-                  className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white ${
-                    !props.sidebarOpen && '!h-0 !delay-[0]'
-                  }`}
-                ></span>
-                <span
-                  className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${
-                    !props.sidebarOpen && '!h-0 !delay-200'
-                  }`}
-                ></span>
-              </span>
-            </span>
-          </button>
-
-          <Link className="block flex-shrink-0 lg:hidden" href="/">
-            <Image
-              width={32}
-              height={32}
-              src={'/images/logo/logo-icon.svg'}
-              alt="Logo"
-            />
-          </Link>
-        </div>
-        {props.isDashboard ? (
-          <div className="hidden sm:block">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
+    <>
+      <header className="flex flex-wrap sm:justify-start text-white sm:flex-nowrap z-50 w-full bg-forest-green text-sm py-3 sm:py-0 dark:bg-slate-900">
+        <nav
+          className="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
+          aria-label="Global"
+        >
+          <div className="flex items-center justify-between">
+            <a
+              className="flex-none text-3xl font-semibold dark:text-white"
+              href="/"
+              aria-label="Farmex Suite Brand"
             >
-              <div>
-                {searchModalOpen ? (
-                  ''
-                ) : (
-                  <button
-                    className={`w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600/80 rounded-full ml-3 ${'bg-slate-200'}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                      setSearchModalOpen(true);
-                    }}
-                    aria-controls="search-modal"
+              Farmex Suite
+            </a>
+            <div className="sm:hidden">
+              <button
+                type="button"
+                className="hs-collapse-toggle w-9 h-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                data-hs-collapse="#navbar-collapse-with-animation"
+                aria-controls="navbar-collapse-with-animation"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  className="hs-collapse-open:hidden flex-shrink-0 w-4 h-4"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                  />
+                </svg>
+                <svg
+                  className="hs-collapse-open:block flex-shrink-0 hidden w-4 h-4"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            id="navbar-collapse-with-animation"
+            className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
+          >
+            <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
+              {/* DROP DOWN */}
+              <div className="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] sm:py-4">
+                <button
+                  type="button"
+                  className="flex items-center w-full font-semibold  hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+                >
+                  Products
+                  <svg
+                    className="flex-shrink-0 ms-2 w-4 h-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                   >
-                    <span className="sr-only bg-success">Search</span>
-                    <svg
-                      className="w-4 h-4"
-                      viewBox="0 0 16 16"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+
+                <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 hidden z-10  sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5">
+                  <a
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    href="/"
+                  >
+                    About
+                  </a>
+                  <div className="hs-dropdown relative [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover]">
+                    <button
+                      type="button"
+                      className="w-full flex justify-between items-center text-sm text-gray-800 rounded-lg py-2 px-3 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                     >
-                      <path
-                        className="fill-current text-slate-500 dark:text-slate-400"
-                        d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5z"
-                      />
-                      <path
-                        className="fill-current text-slate-400 dark:text-slate-500"
-                        d="M15.707 14.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z"
-                      />
-                    </svg>
-                  </button>
-                )}
-                <SearchModal
-                  id="search-modal"
-                  searchId="search"
-                  modalOpen={searchModalOpen}
-                  setModalOpen={setSearchModalOpen}
-                />
+                      Sub Menu
+                      <svg
+                        className="sm:-rotate-90 flex-shrink-0 ms-2 w-4 h-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </button>
+
+                    <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 sm:w-48 z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg p-2 dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute sm:border before:-end-5 before:top-0 before:h-full before:w-5 top-0 end-full !mx-[10px]">
+                      <a
+                        className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        href="/"
+                      >
+                        About
+                      </a>
+                      <a
+                        className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        href="/"
+                      >
+                        Downloads
+                      </a>
+                      <a
+                        className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        href="/"
+                      >
+                        Team Account
+                      </a>
+                    </div>
+                  </div>
+
+                  <a
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    href="/"
+                  >
+                    Downloads
+                  </a>
+                  <a
+                    className="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    href="/"
+                  >
+                    Team Account
+                  </a>
+                </div>
               </div>
-            </form>
-          </div>
-        ) : (
-          <div className="flex justify-center items-center">
-            <Link href={'/'}>
-              <h1 className="text-3xl font-semibold text-gray-600">
-                Farmex Cloud
-              </h1>
-            </Link>
-          </div>
-        )}
+              {/* END OF DROP DOWN */}
 
-        <div className="flex items-center gap-3 2xsm:gap-7">
-          <ul className="flex items-center gap-2 2xsm:gap-4">
-            {props.isDashboard ? (
-              <>
-                <DarkModeSwitcher />
-
-                <DropdownNotification />
-                <DropdownMessage />
-                <DashboardHelp />
-              </>
-            ) : (
-              <ul className="flex items-center gap-2 2xsm:gap-4">
-                <li>
-                  <Link href={'/pricing'}>Pricing</Link>
-                </li>
-                <li>Products(dropdown)</li>
-                <li>
-                  <Link href={'/farmex-projects'}>Farmex Projects</Link>
-                </li>
-              </ul>
-            )}
-          </ul>
-
-          {props.isDashboard ? (
-            <DropdownUser />
-          ) : (
-            <div className="flex gap-2 items-center">
-              <Link href="/consulatation-request">Talk to a Consultant</Link>
+              {navTopLinks.map((link, i) => (
+                <Link
+                  href={link?.href}
+                  key={i}
+                  className="font-semibold text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500"
+                >
+                  {link?.name}{' '}
+                </Link>
+              ))}
 
               <Link
+                className="flex items-center gap-x-2 font-semibold text-gray-500 hover:text-blue-600 sm:border-s sm:border-gray-300 sm:my-6 sm:ps-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500"
                 href="/auth/signin"
-                className="inline-flex items-center justify-center rounded-md bg-primary py-2 px-4 text-center text-black hover:bg-opacity-90 lg:px-8 xl:px-10"
               >
-                Login
-              </Link>
-              <Link
-                href="/auth/signup"
-                className="inline-flex items-center justify-center rounded-md bg-meta-3 py-2 px-4 text-center  text-black hover:bg-opacity-90 lg:px-8 xl:px-10"
-              >
-                Sign Up
+                <svg
+                  className="flex-shrink-0 w-4 h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                Account
               </Link>
             </div>
-          )}
-        </div>
-      </div>
-    </header>
-  );
-};
+          </div>
+        </nav>
+      </header>
 
-export default Header;
+      <nav className="w-full md:max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 flex justify-end items-end flex-1 bg-midnight-teal py-4">
+        <div className="relative flex flex-row justify-between items-center gap-x-8 border-t py-4 sm:py-0 dark:border-slate-700">
+          <div className="flex items-center w-full sm:w-[auto]">
+            <span className="font-semibold text-success whitespace-nowrap text-xl border-e border-e-white/[.7] sm:border-transparent pe-4 me-4 sm:py-3.5 dark:text-white">
+              Farmex Platforms
+            </span>
+
+            <div className="w-full sm:hidden">
+              <button
+                type="button"
+                className="hs-collapse-toggle group w-full inline-flex justify-between items-center gap-2 rounded-lg font-medium text-gray-600 border border-gray-200 align-middle py-1.5 px-2 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-white/[.5] transition"
+                data-hs-collapse="#secondary-nav-toggle"
+                aria-controls="secondary-nav-toggle"
+                aria-label="Toggle navigation"
+                onClick={toggleDropdown}
+              >
+                Overview
+                <svg
+                  className="hs-dropdown-open:rotate-180 flex-shrink-0 w-4 h-4 transition group-hover:text-gray-800"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="secondary-nav-toggle"
+            className={`bg-[#074b3e] text-white ${showDropdown?'': 'hidden'} hs-collapse overflow-hidden transition-all duration-300 absolute top-16 end-0 w-full rounded-lg sm:block sm:static sm:top-0 sm:w-full sm:max-h-full sm:bg-transparent sm:overflow-visible`}
+          >
+            <div className="flex flex-col py-2 sm:flex-row sm:justify-end sm:gap-y-0 sm:gap-x-6 sm:py-0">
+              {navBottomLinks.map((link, i) => (
+                <Link
+                  key={i}
+                  className="text-sm font-medium text-whiten hover:text-blue-600 sm:border-b-2 border-b-transparent py-2 sm:py-3.5 dark:text-gray-400 "
+                  href={link?.href}
+                >
+                  {link?.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+}

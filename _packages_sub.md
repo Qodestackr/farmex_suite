@@ -123,10 +123,7 @@ Enhanced receipt forwarding capabilities.
 Supplier Management:
 
 Advanced supplier management features.
-Features:
 
-Cloud-first ML, GIS, and advanced SaaS functionalities.
-Generate Public URLs:
 
 Advanced public URL generation.
 API Integrations:

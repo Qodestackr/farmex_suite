@@ -1,0 +1,6 @@
+export {}
+
+/**
+ * PEER TO PEER WITH BLOCKCHAIN
+ * BARTER TRADE
+ */

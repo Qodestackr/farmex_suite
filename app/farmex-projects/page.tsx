@@ -1,7 +1,7 @@
 import React from 'react';
 
 function FarmexProjects() {
-  return <div>FarmexProjects</div>;
+  return <div>Manage Farm Projects</div>;
 }
 
 export default FarmexProjects;

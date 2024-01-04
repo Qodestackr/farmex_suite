@@ -45,7 +45,7 @@ function PricingTab(props: PricingTabProps) {
           </div>
           <a
             className="w-full bg-[#096328] text-white inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-3 text-sm font-medium  shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
-            href="#0"
+            href="/"
           >
             Purchase Plan
           </a>
@@ -79,7 +79,6 @@ export default function PricingTable() {
 
   return (
     <div>
-      {/* Pricing toggle */}
       <div className="flex justify-center  max-w-[14rem] m-auto mb-8 lg:mb-16 ">
         <div className="relative  flex w-full p-1  dark:bg-slate-900 rounded-full">
           <span
@@ -127,7 +126,6 @@ export default function PricingTable() {
       </div>
 
       <div className="max-w-sm mx-auto grid gap-6 lg:grid-cols-3 items-start lg:max-w-none">
-        {/* Pricing tab 1 */}
         <PricingTab
           yearly={yearly}
           planName="Harvest Precision"
@@ -144,7 +142,6 @@ export default function PricingTable() {
           ]}
         />
 
-        {/* Pricing tab 2 */}
         <PricingTab
           yearly={yearly}
           popular={true}
@@ -162,7 +159,6 @@ export default function PricingTable() {
           ]}
         />
 
-        {/* Pricing tab 3 */}
         <PricingTab
           yearly={yearly}
           planName="Precision Elite"

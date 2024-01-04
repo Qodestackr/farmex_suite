@@ -47,11 +47,41 @@ module.exports = {
       satoshi: ['Satoshi', 'sans-serif']
     },
     colors: {
-      /********
-       *TODO, Importing a new primary , this will probably break the theming and so on...
-               primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}
+      // Red Background Colors
+      'red-800': '#b91c1c',
+      'red-900': '#981b1b',
+      'pale-aqua': '#b1f5d9',
+      // Green Background Colors
+      'green-800': '#047857',
+      'green-900': '#065f46',
+      'soft-mint-green': '#daf9f0',
+      'fresh-green': '#5adaa6',
+      'deep-teal': '#005e59',
+      'deep-teal-2': '#074c3f',
+      'forest-green': '#007a64',
+      'light-grayish-blue': '#f8fafc',
+      'dark-emerald-green': '#1eab82',
 
-       */
+      // Additional Shades
+      'dark-mint-green': '#8ed8c9',
+      'midnight-teal': '#003b38',
+      'lush-forest': '#004f49',
+      'pale-gray': '#edf2f7',
+      'rich-emerald-green': '#147240',
+      'gray-main': '#f5f5f5',
+
+      // Blue Text Colors
+      'blue-800': '#1d4ed8',
+      'blue-900': '#1e3a8a',
+
+      // Alert Colors
+      'blue-500': '#3b82f6', // Info Alert Background
+      white: '#ffffff', // Text Color for Alerts
+
+      'red-500': '#dc2626', // Danger Alert Background
+      'green-500': '#22c55e', // Success Alert Background
+      'gray-800': '#374151', // Dark Alert Background
+      main: '#0E2557',
       primary: {
         50: '#eff6ff',
         100: '#dbeafe',
@@ -108,6 +138,41 @@ module.exports = {
       ...defaultTheme.screens
     },
     extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
       fontSize: {
         'title-xxl': ['44px', '55px'],
         'title-xl': ['36px', '45px'],
@@ -306,5 +371,4 @@ module.exports = {
       }
     }
   },
-  plugins: []
 };

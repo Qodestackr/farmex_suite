@@ -4,7 +4,6 @@ import ChartOne from '../Charts/FarmexRevenueChart';
 import ChartThree from '../Charts/FarmexVisitorAnalyticsFunnel';
 import ChartTwo from '../Charts/FarmexProfitChart';
 import ChatCard from '../Chat/ChatCard';
-import TableOne from '../Tables/TableOne';
 import CardDataStats from '../CardDataStats';
 import JoyRide from 'react-joyride';
 
@@ -154,7 +153,6 @@ const ECommerce: React.FC = () => {
         <ChartThree />
         <MapOne />
         <div className="col-span-12 xl:col-span-8 tour-contact">
-          <TableOne />
         </div>
         <ChatCard />
       </div>

@@ -291,4 +291,10 @@ declare class Joyride extends React.Component<Props, State> {
     render(): React.JSX.Element | null;
 }
 
-export { ACTIONS, Actions, AnyObject, BaseProps, BeaconProps, BeaconRenderProps, CallBackProps, Callback, EVENTS, Events, LIFECYCLE, Lifecycle, Locale, OverlayProps, Placement, Props, STATUS, State, Status, Step, StepMerged, StepProps, StoreHelpers, StoreOptions, Styles, StylesOptions, TooltipProps, TooltipRenderProps, Joyride as default };
+export { ACTIONS, Actions, AnyObject, BaseProps, 
+BeaconProps, BeaconRenderProps, CallBackProps, Callback, 
+EVENTS, Events, LIFECYCLE, Lifecycle, Locale, OverlayProps, 
+Placement, Props, STATUS, State, Status, Step, StepMerged, 
+StepProps, StoreHelpers, StoreOptions, Styles, StylesOptions, 
+TooltipProps, TooltipRenderProps, Joyride as default 
+};
